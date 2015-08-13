@@ -1,0 +1,13 @@
+
+To accomplish this task, I took a look at the server.rb file.
+
+I saw that the POST was targetting "/ingredients", so after some research
+and talking to my fellow cohorts, I found out that "ingredients=" could
+be the target of my curl post.
+
+The syntax for the curl request was: curl -d "target for data" url
+
+Which became: system("curl -d 'ingredient=#{item}' localhost:4567/ingredients")
+
+I then wrapped my needed ingredients into an array and ran it through a .each
+loop to add the proper variable to my curl post each time.
